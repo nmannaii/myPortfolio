@@ -1,18 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { PresentationComponent } from '../../presentation/presentation.component';
+import { HomeComponent } from '../../home/home.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { AboutComponent } from '../../about/about.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModule
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    PresentationComponent,
+    HomeComponent,
+    AboutComponent
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    PresentationComponent,
+    HomeComponent,
+    AboutComponent
   ]
 })
 export class MyLayoutModule { }

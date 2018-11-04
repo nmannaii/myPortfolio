@@ -1,7 +1,18 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <span>
-      <img
+      <img src="assets/white-logo.png" alt="my logo" width="180px">
     </span>
+    <div class="spacer">
+      <a mat-button color="primary" (click)="showHomeComponent()">Home</a>
+      <a mat-button color="primary" (click)="showAboutComponent()">About</a>
+      <a mat-button color="primary">Resume</a>
+      <a mat-button color="primary">Projects</a>
+      <a mat-button color="primary">Contact</a>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
+<app-presentation></app-presentation>
+<app-home [show]="showHome"></app-home>
+<app-about [show]="showAbout"></app-about>
+
