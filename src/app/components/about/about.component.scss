@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
 .mat-card {
-  background: black;
   position: absolute;
   top: 10%;
   right: 0;
@@ -9,66 +9,40 @@
   max-width: 30%;
   max-height: 75%;
 }
-.avatar {
-  position: absolute;
-  left: 35%;
-  top:35%;
-  border-radius: 50%;
-  margin: auto;
-  border: solid white 2px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.356);
+p.about-me {
+  i {
+    font-size: 12px;
+  }
+  font-size: 15px;
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  color: rgb(88, 88, 88);
 }
-h1 {
-  font-family: 'Montserrat', 'Roboto';
-  font-size: 1.7em;
-  font-weight: 500;
-  color: rgb(61, 61, 61);
+.other{
+  font-family: 'Roboto Slab';
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(46, 46, 46);
+  p span {
+    color: rgb(104, 104, 104);
+  }
 }
-p {
-  font-family: 'Montserrat', 'Roboto';
-  font-weight: 500;
-  font-size: .9em;
-  color: rgb(9, 139, 111);
-}
-.card-action {
+iframe {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 4em;
-  button {
-    font-family: 'Montserrat', 'Roboto';
-    font-size: 18px;
-    font-weight: 500;
-  }
-  button:hover {
-    color: rgb(67, 180, 143);
-    transition: .5s all;
-  }
-}
-.social-media {
-  a{
-    margin-right: .5em;
-    margin-bottom: 2em !important;
-    color: black;
-    i {
-      font-size: 25px;
-    }
-  }
-  text-align: center;
-  height: 5em;
-}
-.social-media a:hover {
-  color: rgb(34, 148, 110);
-  transition: .5s all;
+  left: 0;
 }
 @media screen and (max-width: 600px) {
   .mat-card {
     max-width: 95%;
   }
-  .avatar {
-    top: 30%;
-    left: 35%;
-    width: 100px;
+  .other{
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(46, 46, 46);
+    p span {
+      color: rgb(104, 104, 104);
+    }
   }
 }
 

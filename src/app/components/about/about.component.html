@@ -1,17 +1,33 @@
 <mat-card [@flip]="showState" [ngStyle]="{'display': display}">
-  <img mat-card-image src="assets/cover.png" width="200px" />
-  <img src="assets/ndm.jpg" class="avatar" alt="avatar" width="150px;" />
+  <mat-card-title>
+    <h4 class="mb-3">About Me!</h4>
+  </mat-card-title>
+  <mat-divider></mat-divider>
+  <p class="about-me lead pt-3">
+    <i class="fa fa-quote-left"></i>
+    I'm Najmedine Mannaii, computer science engineer student at the National High School of Engineers of Tunis.
+    I'm fond on Full and MEAN stack developpement. I'm creative, organized and hard worker.
+    <i class="fa fa-quote-right"></i>
+  </p>
   <mat-card-content>
-    <h1 class="text-center">Najmedine Mannaii</h1>
-    <p class="text-center mt-0">About me</p>
-    <div class="social-media">
-      <a mat-icon-button><i class="fa fa-linkedin-square"></i></a>
-      <a mat-icon-button><i class="fa fa-facebook-square"></i></a>
-      <a mat-icon-button><i class="fa fa-github-square"></i></a>
+    <div class="row other">
+      <p class="col-6">
+        AGE.... <span>23.</span>
+      </p>
+      <p class="col-6">
+        RESIDENCE.... <span>TUNISIA.</span>
+      </p>
+    </div>
+    <div class="row other">
+      <p class="col-6">
+        INTERNSHIP.... <span>Available.</span>
+      </p>
+      <p class="col-6">
+        ADDRESS.... <span>Ariana, Raoued.</span>
+      </p>
     </div>
   </mat-card-content>
-  <div class="row card-action">
-    <button mat-button class="col-6">Download CV <i class="fa fa-download ml-1"></i></button>
-    <button mat-button class="col-6">Contact <i class="fa fa-paper-plane"></i></button>
-  </div>
+  <iframe src="https://player.vimeo.com/video/298878728?autoplay=1" width="100%" height="50%" frameborder="0"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+  </iframe>
 </mat-card>
