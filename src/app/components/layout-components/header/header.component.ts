@@ -8,16 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   public showHome = true;
   public showAbout = false;
+  public showResume = false;
   constructor() { }
 
   ngOnInit() {
   }
   showAboutComponent() {
-    this.showHome = false;
+    this.showHome = this.showResume = false;
     this.showAbout = true;
   }
   showHomeComponent() {
+    this.showAbout = this.showResume = false;
     this.showHome = true;
-    this.showAbout = false;
+  }
+  showResumeComponent() {
+    this.showHome = this.showAbout = false;
+    this.showResume = true;
   }
 }

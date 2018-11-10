@@ -4,15 +4,15 @@
       <img src="assets/white-logo.png" alt="my logo" width="180px">
     </span>
     <div class="spacer">
-      <a mat-button color="primary" (click)="showHomeComponent()">Home</a>
-      <a mat-button color="primary" (click)="showAboutComponent()">About</a>
-      <a mat-button color="primary">Resume</a>
-      <a mat-button color="primary">Projects</a>
-      <a mat-button color="primary">Contact</a>
+      <a mat-button [ngClass]="{'is-active': showHome}" (click)="showHomeComponent()"><i class="fa fa-home"></i><br />Home</a>
+      <a mat-button [ngClass]="{'is-active': showAbout}" (click)="showAboutComponent()"><i class="fa fa-user"></i><br>About</a>
+      <a mat-button [ngClass]="{'is-active': showResume}" (click)="showResumeComponent()"><i class="fa fa-book"></i><br>Resume</a>
+      <a mat-button><i class="fa fa-code-fork"></i><br>Projects</a>
+      <a mat-button><i class="fa fa-at"></i><br>Contact</a>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
 <app-presentation></app-presentation>
 <app-home [show]="showHome"></app-home>
 <app-about [show]="showAbout"></app-about>
-
+<app-resume [show]="showResume"></app-resume>

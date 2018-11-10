@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
-import { MatToolbarModule, MatButtonModule, MatCardModule, MatDividerModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule, MatDividerModule, MatGridListModule, MatListModule } from '@angular/material';
+
 import { PresentationComponent } from '../../presentation/presentation.component';
+import { HeaderComponent } from '../header/header.component';
 import { HomeComponent } from '../../home/home.component';
-import {MatGridListModule} from '@angular/material/grid-list';
 import { AboutComponent } from '../../about/about.component';
+import { ResumeComponent } from '../../resume/resume.component';
+import { ResumeDataService } from '../../resume/resume.data.service';
+
 
 @NgModule({
   imports: [
@@ -14,19 +17,22 @@ import { AboutComponent } from '../../about/about.component';
     MatButtonModule,
     MatCardModule,
     MatGridListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatListModule
   ],
   declarations: [
     HeaderComponent,
     PresentationComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ResumeComponent
   ],
   exports: [
     HeaderComponent,
     PresentationComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ResumeComponent
   ]
 })
 export class MyLayoutModule { }
