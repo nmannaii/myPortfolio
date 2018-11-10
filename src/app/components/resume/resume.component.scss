@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import "../../../variables.scss";
+.mat-card {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 35%;
+  max-height: 75%;
+}
+
+.working-experience {
+  border-right: solid .009em gray;
+  h1 {
+    color: $green;
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-top: .5rem;
+  }
+  h1::before {
+    content: "\f0c3";
+    font-family: FontAwesome;
+    padding-right: .5rem;
+  }
+  h3.work-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  h5.work-location {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  h6.work-duration {
+    font-weight: 400;
+    font-size: .7rem;
+    font-style: italic;
+  }
+  h6.achievements {
+    font-weight: 600;
+    font-size: .7rem;
+    font-style: italic;
+    color: $light-blue;
+  }
+  p {
+    font-size: .75rem;
+    color: $dark-blue;
+    text-align: justify;
+  }
+  p::before {
+    content: "\f192";
+    font-family: FontAwesome;
+    margin-right: .5em;
+    margin-left: .8rem;
+    color: $dark-gray;
+  }
+  .arrow::before {
+    content: "\f061";
+    font-family: FontAwesome;
+  }
+}
+
+.education {
+  border-right: solid .009em gray;
+  h1 {
+    color: $green;
+    font-family: 'Oswald';
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-top: .5rem;
+  }
+  h1::before {
+    content: "\f19d";
+    font-family: FontAwesome;
+    padding-right: .5rem;
+    text-decoration: none;
+  }
+  h3.work-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  h5.work-location {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  h6.work-duration {
+    font-weight: 400;
+    font-size: .7rem;
+    font-style: italic;
+  }
+  h6.achievements {
+    font-weight: 600;
+    font-size: .7rem;
+    font-style: italic;
+    color: $light-blue;
+  }
+  p {
+    font-size: .75rem;
+    color: $dark-blue;
+    text-align: justify;
+  }
+  p::before {
+    content: "\f192";
+    font-family: FontAwesome;
+    margin-right: .5em;
+    margin-left: .8rem;
+    color: $dark-gray;
+  }
+  .arrow::before {
+    content: "\f061";
+    font-family: FontAwesome;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mat-card {
+    max-width: 95%;
+  }
+}
+
+////////////
