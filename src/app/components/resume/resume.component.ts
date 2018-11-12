@@ -16,6 +16,7 @@ export class ResumeComponent implements OnInit, OnChanges {
   public showState = 'show';
   public display = 'none';
   public resumeWork = (new ResumeDataService()).work;
+  public resumeEducation = (new ResumeDataService()).education;
   constructor() {
   }
 

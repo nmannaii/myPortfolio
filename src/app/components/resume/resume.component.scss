@@ -7,47 +7,103 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  max-width: 35%;
+  max-width: 40%;
   max-height: 75%;
+  overflow-y: auto;
+}
+/* width */
+.mat-card::-webkit-scrollbar {
+  width: 10px;
 }
 
+/* Track */
+.mat-card::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+.mat-card::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  transition: background .5s ease-in-out;
+}
+.mat-card:hover::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+div.row {
+  font-family: 'Poppins';
+  padding-left: .5em;
+}
 .working-experience {
-  border-right: solid .009em gray;
-  h1 {
-    color: $green;
-    font-family: 'Oswald';
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding-top: .5rem;
-  }
+  border-left: solid .009em rgba(199, 199, 199, 0.800);
   h1::before {
     content: "\f0c3";
     font-family: FontAwesome;
     padding-right: .5rem;
   }
-  h3.work-title {
-    font-weight: 700;
+}
+.education {
+  border-left: solid .009em rgba(199, 199, 199, 0.800);
+  h1::before {
+    content: "\f19d";
+    font-family: FontAwesome;
+    padding-right: .5rem;
+  }
+}
+.working-experience, .education {
+  h1 {
+    color: $green;
+    font-weight: 400;
     font-size: 1.2rem;
+    padding-top: .5rem;
+  }
+
+  h3.work-title {
+    font-weight: 600;
+    font-size: .85rem;
+    color: $dark-gray
+  }
+  h3::before {
+    content: "\f111";
+    font-family: FontAwesome;
+    margin-left: -1.3rem;
+    padding-right: .6rem;
+    color: $green;
   }
   h5.work-location {
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 300;
+    font-size: .8rem;
+    color: $light-gray;
+  }
+  h5.work-location::before {
+    content: "\f041";
+    font-family: FontAwesome;
+    margin-right: .9rem;
+    font-size: 1.2rem;
   }
   h6.work-duration {
-    font-weight: 400;
+    font-weight: 500;
     font-size: .7rem;
-    font-style: italic;
+    color: rgb(155, 155, 155);
+  }
+  h6.work-duration::before {
+    content: "\f073";
+    font-family: FontAwesome;
+    margin-right: .5rem;
+    font-size: 1.2rem;
   }
   h6.achievements {
-    font-weight: 600;
+    font-weight: 700;
     font-size: .7rem;
-    font-style: italic;
-    color: $light-blue;
+    margin-top: 1.5em;
   }
   p {
-    font-size: .75rem;
-    color: $dark-blue;
+    font-size: .7rem;
+    color: $dark-gray;
     text-align: justify;
+    margin-top: -.3rem;
+    padding-right: 1.5rem;
   }
   p::before {
     content: "\f192";
@@ -62,57 +118,6 @@
   }
 }
 
-.education {
-  border-right: solid .009em gray;
-  h1 {
-    color: $green;
-    font-family: 'Oswald';
-    font-weight: 700;
-    font-size: 1.5rem;
-    padding-top: .5rem;
-  }
-  h1::before {
-    content: "\f19d";
-    font-family: FontAwesome;
-    padding-right: .5rem;
-    text-decoration: none;
-  }
-  h3.work-title {
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-  h5.work-location {
-    font-weight: 700;
-    font-size: 1rem;
-  }
-  h6.work-duration {
-    font-weight: 400;
-    font-size: .7rem;
-    font-style: italic;
-  }
-  h6.achievements {
-    font-weight: 600;
-    font-size: .7rem;
-    font-style: italic;
-    color: $light-blue;
-  }
-  p {
-    font-size: .75rem;
-    color: $dark-blue;
-    text-align: justify;
-  }
-  p::before {
-    content: "\f192";
-    font-family: FontAwesome;
-    margin-right: .5em;
-    margin-left: .8rem;
-    color: $dark-gray;
-  }
-  .arrow::before {
-    content: "\f061";
-    font-family: FontAwesome;
-  }
-}
 @media screen and (max-width: 600px) {
   .mat-card {
     max-width: 95%;

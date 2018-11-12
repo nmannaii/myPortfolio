@@ -1,33 +1,36 @@
 <mat-card [@flip]="showState" [ngStyle]="{'display': display}">
   <mat-card-title>
-    <h4 class="mb-3">My Resume?</h4>
+    <h4 class="mb-3">My Resume</h4>
     <mat-divider></mat-divider>
     <div class="row">
-      <div class="col-6 working-experience">
+      <div class="col-lg-6 col-md-12 col-sm-12 working-experience">
         <h1>Working Experience</h1>
         <mat-divider></mat-divider>
         <ng-template ngFor let-work let-i="index" [ngForOf]="resumeWork">
           <h3 class="work-title pt-2">{{work.title}}</h3>
           <h5 class="work-location">{{work.location}}</h5>
-          <h6 class="work-duration">{{work.starts}} <span class="arrow"></span>{{work.ends}}</h6>
+          <h6 class="work-duration">{{work.starts}} - {{work.ends}}</h6>
           <h6 class="achievements">Achievements/Tasks</h6>
           <p>{{work.task}}</p>
           <mat-divider *ngIf="(i+1)!==resumeWork.length"></mat-divider>
         </ng-template>
       </div>
 
-      <div class="col-6 education">
-          <h1>Education</h1>
-          <mat-divider></mat-divider>
-          <ng-template ngFor let-work let-i="index" [ngForOf]="resumeWork">
-            <h3 class="work-title pt-2">{{work.title}}</h3>
-            <h5 class="work-location">{{work.location}}</h5>
-            <h6 class="work-duration">{{work.starts}} <span class="arrow"></span>{{work.ends}}</h6>
-            <h6 class="achievements">Achievements/Tasks</h6>
-            <p>{{work.task}}</p>
-            <mat-divider *ngIf="(i+1)!==resumeWork.length"></mat-divider>
-          </ng-template>
-        </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 education">
+        <h1>Education</h1>
+        <mat-divider></mat-divider>
+        <ng-template ngFor let-education let-i="index" [ngForOf]="resumeEducation">
+          <h3 class="work-title pt-2">{{education.title}}</h3>
+          <h5 class="work-location">{{education.location}}</h5>
+          <h6 class="work-duration" [ngStyle]="{'color': education.ends === 'present' ? 'rgb(67, 180, 143)' : 'rgb(155, 155, 155)'}">
+            {{education.starts}}
+            -
+            {{education.ends}}
+          </h6>
+          <mat-divider *ngIf="(i+1)!==resumeEducation.length"></mat-divider>
+        </ng-template>
+      </div>
     </div>
+    <mat-divider></mat-divider>
   </mat-card-title>
 </mat-card>
