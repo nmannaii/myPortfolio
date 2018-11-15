@@ -1,0 +1,71 @@
+{
+  "web": [
+    {
+      "skill": "HTML",
+      "comp": 85
+    },
+    {
+      "skill": "CSS",
+      "comp": 85
+    },
+    {
+      "skill": "JavaScript",
+      "comp": 85
+    },
+    {
+      "skill": "JQuery",
+      "comp": 80
+    },
+    {
+      "skill": "Angular",
+      "comp": 80
+    },
+    {
+      "skill": "PHP",
+      "comp": 65
+    },
+    {
+      "skill": "JEE",
+      "comp": 70
+    },
+    {
+      "skill": "Node.js",
+      "comp": 70
+    }
+  ],
+  "programming": [
+    {
+      "skill": "C/C++",
+      "comp": 60
+    },
+    {
+      "skill": "Java",
+      "comp": 75
+    }
+  ],
+  "mobile": [
+    {
+      "skill": "Android",
+      "comp": 50
+    },
+    {
+      "skill": "Ionic",
+      "comp": 65
+    }
+  ]
+  ,
+  "database": [
+    {
+      "skill": "Oracle Database",
+      "comp": 75
+    },
+    {
+      "skill": "Mysql",
+      "comp": 80
+    },
+    {
+      "skill": "MongoDB",
+      "comp": 60
+    }
+  ]
+}

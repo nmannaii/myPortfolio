@@ -1,0 +1,31 @@
+@import "../../../variables.scss";
+.mat-card {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 40%;
+  max-height: 75%;
+  overflow-y: auto;
+}
+
+h1:first-child {
+  margin-top: 35%;
+}
+h1:last-child {
+  text-decoration: underline
+}
+h1 {
+  color: $light-gray;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  .mat-card {
+    max-width: 95%;
+    top: 20%;
+  }
+}
