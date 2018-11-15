@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .mat-card {
   position: absolute;
   top: 10%;
@@ -21,13 +23,13 @@ h1 {
   font-family: 'Montserrat', 'Roboto';
   font-size: 1.7em;
   font-weight: 500;
-  color: rgb(61, 61, 61);
+  color: $dark-gray;
 }
 p {
   font-family: 'Montserrat', 'Roboto';
   font-weight: 500;
   font-size: .9em;
-  color: rgb(9, 139, 111);
+  color: $green;
 }
 .card-action {
   position: absolute;
@@ -49,7 +51,7 @@ p {
     border-image: linear-gradient(rgb(139, 139, 139), rgba(0, 0, 0, 0)) 1 100%;
   }
   a:hover {
-    color: rgb(67, 180, 143);
+    color: $green;
     transition: .5s all;
   }
 }
@@ -66,12 +68,13 @@ p {
   height: 5em;
 }
 .social-media a:hover {
-  color: rgb(34, 148, 110);
+  color: $green;
   transition: .5s all;
 }
 @media screen and (max-width: 600px) {
   .mat-card {
     max-width: 95%;
+    top: 20%;
   }
   .avatar {
     top: 30%;

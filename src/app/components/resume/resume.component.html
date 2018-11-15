@@ -1,36 +1,99 @@
 <mat-card [@flip]="showState" [ngStyle]="{'display': display}">
-  <mat-card-title>
-    <h4 class="mb-3">My Resume</h4>
-    <mat-divider></mat-divider>
+
+    <div class="mb-3 exp-heading resume">My Resume</div>
+    <!-- <mat-divider></mat-divider> -->
     <div class="row">
-      <div class="col-lg-6 col-md-12 col-sm-12 working-experience">
+      <div class="col-lg-6 col-md-12 col-sm-12 working-experience line-v">
         <h1>Working Experience</h1>
-        <mat-divider></mat-divider>
         <ng-template ngFor let-work let-i="index" [ngForOf]="resumeWork">
+          <h6 class="work-duration">{{work.starts}} - {{work.ends}}</h6>
           <h3 class="work-title pt-2">{{work.title}}</h3>
           <h5 class="work-location">{{work.location}}</h5>
-          <h6 class="work-duration">{{work.starts}} - {{work.ends}}</h6>
           <h6 class="achievements">Achievements/Tasks</h6>
           <p>{{work.task}}</p>
-          <mat-divider *ngIf="(i+1)!==resumeWork.length"></mat-divider>
+          <div class="ling-h" *ngIf="resumeWork.length !== (i+1)"></div>
         </ng-template>
       </div>
 
-      <div class="col-lg-6 col-md-12 col-sm-12 education">
+      <div class="col-lg-6 col-md-12 col-sm-12 education line-v">
         <h1>Education</h1>
-        <mat-divider></mat-divider>
         <ng-template ngFor let-education let-i="index" [ngForOf]="resumeEducation">
-          <h3 class="work-title pt-2">{{education.title}}</h3>
-          <h5 class="work-location">{{education.location}}</h5>
-          <h6 class="work-duration" [ngStyle]="{'color': education.ends === 'present' ? 'rgb(67, 180, 143)' : 'rgb(155, 155, 155)'}">
+          <h6 class="work-duration" [ngStyle]="{'color': education.ends === 'present' ? '#43a047' : 'rgb(155, 155, 155)'}">
             {{education.starts}}
             -
             {{education.ends}}
           </h6>
-          <mat-divider *ngIf="(i+1)!==resumeEducation.length"></mat-divider>
+          <h3 class="work-title pt-2">{{education.title}}</h3>
+          <h5 class="work-location">{{education.location}}</h5>
+          <div class="ling-h" *ngIf="resumeEducation.length !== (i+1)"></div>
         </ng-template>
       </div>
     </div>
-    <mat-divider></mat-divider>
-  </mat-card-title>
+
+    <!-- <mat-divider></mat-divider> -->
+    <div class="mb-3 exp-heading skills">My Skills</div>
+    <h4 class="text-left skill-title"><i class="fa fa-code mr-2"></i>Web</h4>
+    <div class="row">
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of webSkill.slice(0,4)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of webSkill.slice(4,8)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="text-left skill-title"><i class="fa fa-terminal mr-2"></i>Programming</h4>
+    <div class="row">
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of programmingSkill.slice(0,1)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of programmingSkill.slice(1,2)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="text-left skill-title"><i class="fa fa-mobile mr-2"></i>Mobile</h4>
+    <div class="row">
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of mobileSkill.slice(0,1)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of mobileSkill.slice(1,2)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="text-left skill-title"><i class="fa fa-database mr-2"></i>Database</h4>
+    <div class="row">
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of databaseSkill.slice(0,2)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="skill" *ngFor="let web of databaseSkill.slice(2,3)">
+          <h5>{{web.skill}}</h5>
+          <mat-progress-bar [value]="web.comp" [color]="'accent'"></mat-progress-bar>
+        </div>
+      </div>
+    </div>
+
 </mat-card>

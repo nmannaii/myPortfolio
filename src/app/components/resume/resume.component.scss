@@ -13,7 +13,7 @@
 }
 /* width */
 .mat-card::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 /* Track */
@@ -30,68 +30,100 @@
 .mat-card:hover::-webkit-scrollbar-thumb {
     background: gray;
 }
-
+div.exp-heading {
+  font-display: 'Poppins';
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+}
+div.exp-heading::after {
+  content: '';
+  position:  absolute;
+  left: -.9rem;
+  top: 50px;
+  width: 95%;
+  height: 1px;
+  background: radial-gradient(ellipse at left, rgba(201, 201, 201, 0.800) 0%, rgba(255, 255, 255, 0) 70%);
+}
 div.row {
   font-family: 'Poppins';
   padding-left: .5em;
+  position: relative;
 }
 .working-experience {
-  border-left: solid .009em rgba(199, 199, 199, 0.800);
   h1::before {
     content: "\f0c3";
     font-family: FontAwesome;
     padding-right: .5rem;
+    color: $green;
   }
 }
 .education {
-  border-left: solid .009em rgba(199, 199, 199, 0.800);
   h1::before {
     content: "\f19d";
     font-family: FontAwesome;
     padding-right: .5rem;
+    color: $green;
   }
 }
+.line-v::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: -moz-radial-gradient(top, ellipse cover, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+  background: -webkit-radial-gradient(top, ellipse cover, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(ellipse at top, rgba(201, 201, 201, 0.800) 0%, rgba(255, 255, 255, 0) 70%);
+}
+.working-experience::after, .education::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  width: 95%;
+  height: 1px;
+  background: -webkit-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(ellipse at left, rgba(201, 201, 201, 0.800) 0%, rgba(255, 255, 255, 0) 70%);
+}
 .working-experience, .education {
-  h1 {
-    color: $green;
-    font-weight: 400;
-    font-size: 1.2rem;
-    padding-top: .5rem;
+  div.ling-h {
+    margin-left: -.85rem;
+    width: 95%;
+    height: 1px;
+    background: -webkit-radial-gradient(left, ellipse cover, rgba(197, 202, 213, 0.7) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(ellipse at left, rgba(201, 201, 201, 0.800) 0%, rgba(255, 255, 255, 0) 70%);
   }
-
+  h1 {
+    color: $dark-gray;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: .5rem;
+  }
   h3.work-title {
     font-weight: 600;
     font-size: .85rem;
     color: $dark-gray
-  }
-  h3::before {
-    content: "\f111";
-    font-family: FontAwesome;
-    margin-left: -1.3rem;
-    padding-right: .6rem;
-    color: $green;
   }
   h5.work-location {
     font-weight: 300;
     font-size: .8rem;
     color: $light-gray;
   }
-  h5.work-location::before {
-    content: "\f041";
-    font-family: FontAwesome;
-    margin-right: .9rem;
-    font-size: 1.2rem;
-  }
   h6.work-duration {
     font-weight: 500;
     font-size: .7rem;
     color: rgb(155, 155, 155);
+    padding-top: 1rem;
+    padding-left: .1rem;
   }
   h6.work-duration::before {
-    content: "\f073";
+    content: "\f111";
     font-family: FontAwesome;
-    margin-right: .5rem;
-    font-size: 1.2rem;
+    margin-left: -1.3rem;
+    padding-right: .6rem;
+    position: relative;
   }
   h6.achievements {
     font-weight: 700;
@@ -118,9 +150,32 @@ div.row {
   }
 }
 
+.skills {
+  margin-top: 3rem;
+}
+.skill-title {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  i {
+    color: $green;
+    font-weight: 700;
+  }
+}
+.skill {
+  h5 {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: $light-gray
+  }
+}
 @media screen and (max-width: 600px) {
   .mat-card {
     max-width: 95%;
+    top: 20%;
   }
 }
 

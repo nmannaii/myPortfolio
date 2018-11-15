@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MyLayoutModule } from './components/layout-components/layout-module/my.layout.module';
 import { ResumeDataService } from './components/resume/resume.data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ResumeDataService } from './components/resume/resume.data.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MyLayoutModule
+    MyLayoutModule,
+    HttpClientModule
   ],
   providers: [
     ResumeDataService
